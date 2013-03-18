@@ -23,6 +23,7 @@
 		
 		// defaults
 		self.borderColor      = [UIColor blackColor];
+		self.backgroundColor  = [UIColor whiteColor];
 		self.borderMultiplier = 2.0;
 	}
 	return self;
@@ -42,12 +43,21 @@
 	// draw the border. it's slightly wider than the specified line width.
 	[self drawLine:self.borderColor.CGColor
 					 width:baseWidth * self.borderMultiplier
+		 allowDashes:NO
 		forZoomScale:zoomScale
 			 inContext:context];
-	
+
+	// a white background.
+	[self drawLine:self.backgroundColor.CGColor
+					 width:baseWidth
+		 allowDashes:NO
+		forZoomScale:zoomScale
+			 inContext:context];
+
 	// draw the actual line.
 	[self drawLine:self.strokeColor.CGColor
 					 width:baseWidth
+		 allowDashes:YES
 		forZoomScale:zoomScale
 			 inContext:context];
 
@@ -78,6 +88,7 @@
 
 - (void)drawLine:(CGColorRef)color
 					 width:(CGFloat)width
+		 allowDashes:(BOOL)allowDashes
 		forZoomScale:(MKZoomScale)zoomScale
 			 inContext:(CGContextRef)context
 {
@@ -86,7 +97,14 @@
 	
 	// use the defaults which takes care of the dash pattern
 	// and other things
-	[self applyStrokePropertiesToContext:context atZoomScale:zoomScale];
+	if (allowDashes) {
+		[self applyStrokePropertiesToContext:context atZoomScale:zoomScale];
+	} else {
+		// some setting we still want to apply
+		CGContextSetLineCap(context, self.lineCap);
+		CGContextSetLineJoin(context, self.lineJoin);
+		CGContextSetMiterLimit(context, self.miterLimit);
+	}
 	
 	// now set the colour and width
 	CGContextSetStrokeColorWithColor(context, color);

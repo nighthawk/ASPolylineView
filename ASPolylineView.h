@@ -14,6 +14,12 @@
  */
 @property (nonatomic, strong) UIColor *borderColor;
 
+/* The color used as the backdrop if there's a dash pattern.
+ * Defaults to white.
+ */
+@property (nonatomic, strong) UIColor *backgroundColor;
+
+
 /* The factor by which the border expands past the line.
  * 1.5 leads to a very thin line.
  * Defaults to 2.0.
