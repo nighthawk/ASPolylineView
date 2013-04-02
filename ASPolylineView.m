@@ -29,11 +29,6 @@
 	return self;
 }
 
-- (void)dealloc
-{
-	CGPathRelease(self.path);
-}
-
 - (void)drawMapRect:(MKMapRect)mapRect
 					zoomScale:(MKZoomScale)zoomScale
 					inContext:(CGContextRef)context
@@ -82,6 +77,7 @@
 	}
 	
 	self.path = path;
+	CGPathRelease(path);
 }
 
 #pragma mark - Private helpers
