@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A202C4917328F82009F668B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A202C4817328F82009F668B /* UIKit.framework */; };
+		3A202C4B17328F82009F668B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A202C4A17328F82009F668B /* Foundation.framework */; };
+		3A202C4D17328F82009F668B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A202C4C17328F82009F668B /* CoreGraphics.framework */; };
+		3A202C5317328F82009F668B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A202C5117328F82009F668B /* InfoPlist.strings */; };
+		3A202C5517328F82009F668B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A202C5417328F82009F668B /* main.m */; };
+		3A202C5917328F82009F668B /* ASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A202C5817328F82009F668B /* ASAppDelegate.m */; };
+		3A202C5B17328F82009F668B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A202C5A17328F82009F668B /* Default.png */; };
+		3A202C5D17328F82009F668B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A202C5C17328F82009F668B /* Default@2x.png */; };
+		3A202C5F17328F82009F668B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A202C5E17328F82009F668B /* Default-568h@2x.png */; };
+		3A202C6217328F82009F668B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A202C6017328F82009F668B /* MainStoryboard.storyboard */; };
+		3A202C6517328F82009F668B /* ASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A202C6417328F82009F668B /* ASViewController.m */; };
+		3A202C6E17328FD9009F668B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A202C6D17328FD9009F668B /* MapKit.framework */; };
+		3A202C70173291C8009F668B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A202C6F173291C8009F668B /* CoreLocation.framework */; };
+		3A202C71173291D6009F668B /* ASPolylineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A202C6C17328F9E009F668B /* ASPolylineView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A202C4517328F82009F668B /* PolylineExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolylineExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A202C4817328F82009F668B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3A202C4A17328F82009F668B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A202C4C17328F82009F668B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3A202C5017328F82009F668B /* PolylineExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolylineExample-Info.plist"; sourceTree = "<group>"; };
+		3A202C5217328F82009F668B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3A202C5417328F82009F668B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A202C5617328F82009F668B /* PolylineExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PolylineExample-Prefix.pch"; sourceTree = "<group>"; };
+		3A202C5717328F82009F668B /* ASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASAppDelegate.h; sourceTree = "<group>"; };
+		3A202C5817328F82009F668B /* ASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASAppDelegate.m; sourceTree = "<group>"; };
+		3A202C5A17328F82009F668B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3A202C5C17328F82009F668B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3A202C5E17328F82009F668B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3A202C6117328F82009F668B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3A202C6317328F82009F668B /* ASViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASViewController.h; sourceTree = "<group>"; };
+		3A202C6417328F82009F668B /* ASViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASViewController.m; sourceTree = "<group>"; };
+		3A202C6B17328F9D009F668B /* ASPolylineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ASPolylineView.h; path = ../../ASPolylineView.h; sourceTree = "<group>"; };
+		3A202C6C17328F9E009F668B /* ASPolylineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ASPolylineView.m; path = ../../ASPolylineView.m; sourceTree = "<group>"; };
+		3A202C6D17328FD9009F668B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3A202C6F173291C8009F668B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A202C4217328F82009F668B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A202C70173291C8009F668B /* CoreLocation.framework in Frameworks */,
+				3A202C6E17328FD9009F668B /* MapKit.framework in Frameworks */,
+				3A202C4917328F82009F668B /* UIKit.framework in Frameworks */,
+				3A202C4B17328F82009F668B /* Foundation.framework in Frameworks */,
+				3A202C4D17328F82009F668B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A202C3C17328F82009F668B = {
+			isa = PBXGroup;
+			children = (
+				3A202C4E17328F82009F668B /* PolylineExample */,
+				3A202C4717328F82009F668B /* Frameworks */,
+				3A202C4617328F82009F668B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A202C4617328F82009F668B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A202C4517328F82009F668B /* PolylineExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A202C4717328F82009F668B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A202C6F173291C8009F668B /* CoreLocation.framework */,
+				3A202C6D17328FD9009F668B /* MapKit.framework */,
+				3A202C4817328F82009F668B /* UIKit.framework */,
+				3A202C4A17328F82009F668B /* Foundation.framework */,
+				3A202C4C17328F82009F668B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A202C4E17328F82009F668B /* PolylineExample */ = {
+			isa = PBXGroup;
+			children = (
+				3A202C6B17328F9D009F668B /* ASPolylineView.h */,
+				3A202C6C17328F9E009F668B /* ASPolylineView.m */,
+				3A202C5717328F82009F668B /* ASAppDelegate.h */,
+				3A202C5817328F82009F668B /* ASAppDelegate.m */,
+				3A202C6017328F82009F668B /* MainStoryboard.storyboard */,
+				3A202C6317328F82009F668B /* ASViewController.h */,
+				3A202C6417328F82009F668B /* ASViewController.m */,
+				3A202C4F17328F82009F668B /* Supporting Files */,
+			);
+			path = PolylineExample;
+			sourceTree = "<group>";
+		};
+		3A202C4F17328F82009F668B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A202C5017328F82009F668B /* PolylineExample-Info.plist */,
+				3A202C5117328F82009F668B /* InfoPlist.strings */,
+				3A202C5417328F82009F668B /* main.m */,
+				3A202C5617328F82009F668B /* PolylineExample-Prefix.pch */,
+				3A202C5A17328F82009F668B /* Default.png */,
+				3A202C5C17328F82009F668B /* Default@2x.png */,
+				3A202C5E17328F82009F668B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A202C4417328F82009F668B /* PolylineExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A202C6817328F82009F668B /* Build configuration list for PBXNativeTarget "PolylineExample" */;
+			buildPhases = (
+				3A202C4117328F82009F668B /* Sources */,
+				3A202C4217328F82009F668B /* Frameworks */,
+				3A202C4317328F82009F668B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolylineExample;
+			productName = PolylineExample;
+			productReference = 3A202C4517328F82009F668B /* PolylineExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A202C3D17328F82009F668B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Adrian Schoenig";
+			};
+			buildConfigurationList = 3A202C4017328F82009F668B /* Build configuration list for PBXProject "PolylineExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3A202C3C17328F82009F668B;
+			productRefGroup = 3A202C4617328F82009F668B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A202C4417328F82009F668B /* PolylineExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A202C4317328F82009F668B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A202C5317328F82009F668B /* InfoPlist.strings in Resources */,
+				3A202C5B17328F82009F668B /* Default.png in Resources */,
+				3A202C5D17328F82009F668B /* Default@2x.png in Resources */,
+				3A202C5F17328F82009F668B /* Default-568h@2x.png in Resources */,
+				3A202C6217328F82009F668B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A202C4117328F82009F668B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A202C5517328F82009F668B /* main.m in Sources */,
+				3A202C5917328F82009F668B /* ASAppDelegate.m in Sources */,
+				3A202C6517328F82009F668B /* ASViewController.m in Sources */,
+				3A202C71173291D6009F668B /* ASPolylineView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A202C5117328F82009F668B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A202C5217328F82009F668B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3A202C6017328F82009F668B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A202C6117328F82009F668B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A202C6617328F82009F668B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A202C6717328F82009F668B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A202C6917328F82009F668B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PolylineExample/PolylineExample-Prefix.pch";
+				INFOPLIST_FILE = "PolylineExample/PolylineExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3A202C6A17328F82009F668B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PolylineExample/PolylineExample-Prefix.pch";
+				INFOPLIST_FILE = "PolylineExample/PolylineExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A202C4017328F82009F668B /* Build configuration list for PBXProject "PolylineExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A202C6617328F82009F668B /* Debug */,
+				3A202C6717328F82009F668B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A202C6817328F82009F668B /* Build configuration list for PBXNativeTarget "PolylineExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A202C6917328F82009F668B /* Debug */,
+				3A202C6A17328F82009F668B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A202C3D17328F82009F668B /* Project object */;
+}
