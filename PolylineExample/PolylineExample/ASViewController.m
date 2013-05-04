@@ -8,6 +8,8 @@
 
 #import "ASViewController.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "ASPolylineView.h"
 
 @implementation ASViewController
