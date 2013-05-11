@@ -18,17 +18,35 @@
 {
 	[super viewDidLoad];
 
-	CLLocationCoordinate2D coordinates[5] = {
-		CLLocationCoordinate2DMake(-33.962725,151.241913),
-		CLLocationCoordinate2DMake(-33.937663,151.178741),
-		CLLocationCoordinate2DMake(-33.895497,151.148529),
-		CLLocationCoordinate2DMake(-33.892077,151.218567),
-		CLLocationCoordinate2DMake(-33.962725,151.241913),
+	CLLocationCoordinate2D coordinates[6] = {
+		CLLocationCoordinate2DMake(-33.932725,151.222),
+		CLLocationCoordinate2DMake(-33.9125,151.222), // midway
+		CLLocationCoordinate2DMake(-33.892077,151.222),
+		CLLocationCoordinate2DMake(-33.937663,151.178),
+		CLLocationCoordinate2DMake(-33.912563,151.178), // midway
+		CLLocationCoordinate2DMake(-33.895497,151.178),
 	};
 	
-	MKPolyline *myLine = [MKPolyline polylineWithCoordinates:coordinates count:5];
-	[self.mapView addOverlay:myLine];
-	[self.mapView setVisibleMapRect:[self mapRectForCoordinates:coordinates count:5]];
+	// draw as two separate overlays to draw a bridge
+	CLLocationCoordinate2D first[4] = {
+		coordinates[1],
+		coordinates[2],
+		coordinates[3],
+		coordinates[4],
+	};
+
+	CLLocationCoordinate2D second[4] = {
+		coordinates[4],
+		coordinates[5],
+		coordinates[0],
+		coordinates[1],
+	};
+
+	[self.mapView addOverlay:[MKPolyline polylineWithCoordinates:first count:4]];
+	[self.mapView addOverlay:[MKPolyline polylineWithCoordinates:second count:4]];
+	
+	// zoom to all
+	[self.mapView setVisibleMapRect:[self mapRectForCoordinates:coordinates count:6]];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
@@ -36,9 +54,9 @@
 	if ([overlay isKindOfClass:[MKPolyline class]]) {
 		ASPolylineView *polylineView = [[ASPolylineView alloc] initWithPolyline:(MKPolyline *)overlay];
 		polylineView.strokeColor  = [UIColor yellowColor];
-		polylineView.lineWidth		= 4.0f;
-    polylineView.lineJoin			= kCGLineJoinBevel;
-    polylineView.lineCap			= kCGLineCapRound;
+		polylineView.lineWidth		= 8.0f;
+    polylineView.lineJoin			= kCGLineJoinRound;
+    polylineView.lineCap			= kCGLineCapButt;
 		return polylineView;
 	} else {
 		return nil;
