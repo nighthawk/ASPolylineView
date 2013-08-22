@@ -22,6 +22,7 @@
 		3A202C6E17328FD9009F668B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A202C6D17328FD9009F668B /* MapKit.framework */; };
 		3A202C70173291C8009F668B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A202C6F173291C8009F668B /* CoreLocation.framework */; };
 		3A202C71173291D6009F668B /* ASPolylineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A202C6C17328F9E009F668B /* ASPolylineView.m */; };
+		3A23D6F017BD2B3F00C0F2F7 /* ASPolylineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A23D6EF17BD2B3F00C0F2F7 /* ASPolylineRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		3A202C6C17328F9E009F668B /* ASPolylineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ASPolylineView.m; path = ../../ASPolylineView.m; sourceTree = "<group>"; };
 		3A202C6D17328FD9009F668B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3A202C6F173291C8009F668B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3A23D6EE17BD2B3F00C0F2F7 /* ASPolylineRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASPolylineRenderer.h; path = ../../ASPolylineRenderer.h; sourceTree = "<group>"; };
+		3A23D6EF17BD2B3F00C0F2F7 /* ASPolylineRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASPolylineRenderer.m; path = ../../ASPolylineRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 		3A202C4E17328F82009F668B /* PolylineExample */ = {
 			isa = PBXGroup;
 			children = (
+				3A23D6EE17BD2B3F00C0F2F7 /* ASPolylineRenderer.h */,
+				3A23D6EF17BD2B3F00C0F2F7 /* ASPolylineRenderer.m */,
 				3A202C6B17328F9D009F668B /* ASPolylineView.h */,
 				3A202C6C17328F9E009F668B /* ASPolylineView.m */,
 				3A202C5717328F82009F668B /* ASAppDelegate.h */,
@@ -153,6 +158,11 @@
 				CLASSPREFIX = AS;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Adrian Schoenig";
+				TargetAttributes = {
+					3A202C4417328F82009F668B = {
+						DevelopmentTeam = 7N3B54ALZK;
+					};
+				};
 			};
 			buildConfigurationList = 3A202C4017328F82009F668B /* Build configuration list for PBXProject "PolylineExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -194,6 +204,7 @@
 				3A202C5517328F82009F668B /* main.m in Sources */,
 				3A202C5917328F82009F668B /* ASAppDelegate.m in Sources */,
 				3A202C6517328F82009F668B /* ASViewController.m in Sources */,
+				3A23D6F017BD2B3F00C0F2F7 /* ASPolylineRenderer.m in Sources */,
 				3A202C71173291D6009F668B /* ASPolylineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +290,7 @@
 		3A202C6917328F82009F668B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PolylineExample/PolylineExample-Prefix.pch";
 				INFOPLIST_FILE = "PolylineExample/PolylineExample-Info.plist";
@@ -290,6 +302,7 @@
 		3A202C6A17328F82009F668B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PolylineExample/PolylineExample-Prefix.pch";
 				INFOPLIST_FILE = "PolylineExample/PolylineExample-Info.plist";

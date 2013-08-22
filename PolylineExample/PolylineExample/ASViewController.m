@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "ASPolylineView.h"
+#import "ASPolylineRenderer.h"
 
 @implementation ASViewController
 
@@ -58,6 +59,20 @@
     polylineView.lineJoin			= kCGLineJoinRound;
     polylineView.lineCap			= kCGLineCapButt;
 		return polylineView;
+	} else {
+		return nil;
+	}
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+	if ([overlay isKindOfClass:[MKPolyline class]]) {
+		ASPolylineRenderer *polylineRenderer = [[ASPolylineRenderer alloc] initWithPolyline:(MKPolyline *)overlay];
+		polylineRenderer.strokeColor  = [UIColor yellowColor];
+		polylineRenderer.lineWidth		= 8.0f;
+    polylineRenderer.lineJoin			= kCGLineJoinRound;
+    polylineRenderer.lineCap			= kCGLineCapButt;
+		return polylineRenderer;
 	} else {
 		return nil;
 	}
