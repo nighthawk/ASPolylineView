@@ -7,11 +7,11 @@
 
 #import "ASPolylineRenderer.h"
 
-@interface ASPolylineRenderer ()
+@interface ASPolylineRenderer () {
+  CGMutablePathRef _mutablePath;
+}
 
 @property (nonatomic, strong) MKPolyline *polyline;
-
-@property (nonatomic, assign) CGPathRef thePath;
 
 @end
 
@@ -22,7 +22,8 @@
 	self = [super initWithOverlay:polyline];
 	if (self) {
 		self.polyline    = polyline;
-    [self createThePath];
+    _mutablePath = CGPathCreateMutable();
+    [self constructPath];
 		
 		// defaults
 		self.borderColor      = [UIColor blackColor];
@@ -34,7 +35,8 @@
 
 - (void)dealloc
 {
-  CGPathRelease(self.thePath);
+  CGPathRelease(_mutablePath);
+  _mutablePath = NULL;
 }
 
 - (void)drawMapRect:(MKMapRect)mapRect
@@ -70,25 +72,21 @@
 
 }
 
-- (void)createThePath
+- (void)constructPath
 {
 	// turn the polyline into a path
-	CGMutablePathRef path = CGPathCreateMutable();
 	BOOL pathIsEmpty = YES;
 	
 	for (int i = 0; i < self.polyline.pointCount; i++) {
 		CGPoint point = [self pointForMapPoint:self.polyline.points[i]];
 		
 		if (pathIsEmpty) {
-			CGPathMoveToPoint(path, nil, point.x, point.y);
+			CGPathMoveToPoint(_mutablePath, nil, point.x, point.y);
 			pathIsEmpty = NO;
 		} else {
-			CGPathAddLineToPoint(path, nil, point.x, point.y);
+			CGPathAddLineToPoint(_mutablePath, nil, point.x, point.y);
 		}
 	}
-
-	self.thePath = path;
-//	CGPathRelease(path);
 }
 
 #pragma mark - Private helpers
@@ -99,7 +97,7 @@
 		forZoomScale:(MKZoomScale)zoomScale
 			 inContext:(CGContextRef)context
 {
-	CGContextAddPath(context, self.thePath);
+	CGContextAddPath(context, _mutablePath);
 	
 	// use the defaults which takes care of the dash pattern
 	// and other things
