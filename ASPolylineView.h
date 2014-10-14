@@ -6,6 +6,9 @@
 //
 
 #import <MapKit/MapKit.h>
+#import <Availability.h>
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
 
 @interface ASPolylineView : MKOverlayPathView
 
@@ -31,3 +34,5 @@
 - (MKPolyline *)polyline;
 
 @end
+
+#endif

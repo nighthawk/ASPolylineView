@@ -7,6 +7,8 @@
 
 #import "ASPolylineView.h"
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+
 @interface ASPolylineView ()
 
 @property (nonatomic, strong) MKPolyline *polyline;
@@ -110,3 +112,5 @@
 }
 
 @end
+
+#endif
