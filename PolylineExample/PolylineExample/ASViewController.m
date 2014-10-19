@@ -50,7 +50,7 @@
 	[self.mapView setVisibleMapRect:[self mapRectForCoordinates:coordinates count:6]];
 }
 
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
+- (MKOverlayPathRenderer *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
 {
 	if ([overlay isKindOfClass:[MKPolyline class]]) {
 		ASPolylineView *polylineView = [[ASPolylineView alloc] initWithPolyline:(MKPolyline *)overlay];

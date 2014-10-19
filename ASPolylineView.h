@@ -7,7 +7,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface ASPolylineView : MKOverlayPathView
+@interface ASPolylineView : MKOverlayPathRenderer
 
 /* The color used for the wider border around the polyline.
  * Defaults to black.
