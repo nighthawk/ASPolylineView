@@ -44,6 +44,7 @@
 					inContext:(CGContextRef)context
 {
 	CGFloat baseWidth = self.lineWidth;
+  CGFloat width = zoomScale < 0.01 ? baseWidth / 2 : baseWidth;
 
   // nice for debugging
 //  CGContextSetRGBFillColor(context, (rand() % 255) / 255.0, 0, 0, 0.1);
@@ -51,21 +52,23 @@
   
 	// draw the border. it's slightly wider than the specified line width.
 	[self drawLine:self.borderColor.CGColor
-					 width:baseWidth * self.borderMultiplier
+					 width:width * self.borderMultiplier
 		 allowDashes:NO
 		forZoomScale:zoomScale
 			 inContext:context];
 
 	// a white background.
-	[self drawLine:self.backgroundColor.CGColor
-					 width:baseWidth
-		 allowDashes:NO
-		forZoomScale:zoomScale
-			 inContext:context];
+  if (self.backgroundColor) {
+    [self drawLine:self.backgroundColor.CGColor
+             width:width
+       allowDashes:NO
+      forZoomScale:zoomScale
+         inContext:context];
+  }
 
 	// draw the actual line.
 	[self drawLine:self.strokeColor.CGColor
-					 width:baseWidth
+					 width:width
 		 allowDashes:YES
 		forZoomScale:zoomScale
 			 inContext:context];
