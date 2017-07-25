@@ -26,8 +26,8 @@
     [self constructPath];
 		
 		// defaults
-		self.borderColor      = [UIColor blackColor];
-		self.backgroundColor  = [UIColor whiteColor];
+		self.borderColor      = [ASColor blackColor];
+		self.backgroundColor  = [ASColor whiteColor];
 		self.borderMultiplier = 2.0;
 	}
 	return self;

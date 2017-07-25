@@ -2,7 +2,8 @@ ASPolylineView
 ==============
 
 [![Badge w/ Version](http://cocoapod-badges.herokuapp.com/v/ASPolylineView/badge.png)](http://cocoadocs.org/docsets/ASPolylineView)
-[![Badge w/ Platform](http://cocoapod-badges.herokuapp.com/p/ASPolylineView/badge.png)](http://cocoadocs.org/docsets/ASPolylineView)
+[![Badge w/ Platform](http://cocoapod-badges.herokuapp.com/p/ASPolylineView/badge.png)](http://cocoadocs.org/docsets/ASPolylineView) 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
 Drop-in replacements for MKPolylineRenderer and MKPolylineView with more customisation options.

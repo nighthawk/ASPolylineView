@@ -7,17 +7,23 @@
 
 #import <MapKit/MapKit.h>
 
+#if TARGET_OS_IPHONE
+#define ASColor UIColor
+#else
+#define ASColor NSColor
+#endif
+
 @interface ASPolylineRenderer : MKOverlayPathRenderer
 
 /* The color used for the wider border around the polyline.
  * Defaults to black.
  */
-@property (nonatomic, strong) UIColor *borderColor;
+@property (nonatomic, strong) ASColor *borderColor;
 
 /* The color used as the backdrop if there's a dash pattern.
  * Defaults to white.
  */
-@property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic, strong) ASColor *backgroundColor;
 
 
 /* The factor by which the border expands past the line.
