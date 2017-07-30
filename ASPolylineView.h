@@ -10,6 +10,8 @@
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ASPolylineView : MKOverlayPathView
 
 /* The color used for the wider border around the polyline.
@@ -34,5 +36,7 @@
 - (MKPolyline *)polyline;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif

@@ -13,6 +13,8 @@
 #define ASColor NSColor
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ASPolylineRenderer : MKOverlayPathRenderer
 
 /* The color used for the wider border around the polyline.
@@ -37,3 +39,5 @@
 - (MKPolyline *)polyline;
 
 @end
+
+NS_ASSUME_NONNULL_END
