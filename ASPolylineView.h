@@ -8,6 +8,8 @@
 #import <MapKit/MapKit.h>
 #import <Availability.h>
 
+#import "ASPolylineRenderer.h" // Not really needed, but addresses an issue with Carthage
+
 NS_ASSUME_NONNULL_BEGIN
 
 NS_CLASS_DEPRECATED_IOS(2_0, 7_0, "Use ASPolylineRenderer instead")
