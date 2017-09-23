@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ASPolylineView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Drop-in replacement for MKPolylineRenderer and MKPolylineView with more customisation options."
   s.description  = <<-DESC
                     Currently it is simple and only includes drawing a differently coloured border around the line. See header files for options.
