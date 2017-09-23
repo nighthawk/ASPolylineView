@@ -11,11 +11,11 @@
 		3A06C5201F274B2B004DB662 /* ASPolylineView-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A06C51E1F274B2B004DB662 /* ASPolylineView-macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A06C52A1F274BDE004DB662 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A06C5291F274BDE004DB662 /* MapKit.framework */; };
 		3A06C52C1F274BEB004DB662 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A06C52B1F274BEB004DB662 /* MapKit.framework */; };
-		3A5F6C181F274E0A0058DC36 /* ASPolylineRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5F6C141F274E0A0058DC36 /* ASPolylineRenderer.h */; };
-		3A5F6C191F274E0A0058DC36 /* ASPolylineRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5F6C141F274E0A0058DC36 /* ASPolylineRenderer.h */; };
+		3A5F6C181F274E0A0058DC36 /* ASPolylineRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5F6C141F274E0A0058DC36 /* ASPolylineRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A5F6C191F274E0A0058DC36 /* ASPolylineRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5F6C141F274E0A0058DC36 /* ASPolylineRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A5F6C1A1F274E0A0058DC36 /* ASPolylineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F6C151F274E0A0058DC36 /* ASPolylineRenderer.m */; };
 		3A5F6C1B1F274E0A0058DC36 /* ASPolylineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F6C151F274E0A0058DC36 /* ASPolylineRenderer.m */; };
-		3A5F6C1C1F274E0A0058DC36 /* ASPolylineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5F6C161F274E0A0058DC36 /* ASPolylineView.h */; };
+		3A5F6C1C1F274E0A0058DC36 /* ASPolylineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5F6C161F274E0A0058DC36 /* ASPolylineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A5F6C1E1F274E0A0058DC36 /* ASPolylineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F6C171F274E0A0058DC36 /* ASPolylineView.m */; };
 /* End PBXBuildFile section */
 
