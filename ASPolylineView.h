@@ -8,10 +8,9 @@
 #import <MapKit/MapKit.h>
 #import <Availability.h>
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-
 NS_ASSUME_NONNULL_BEGIN
 
+NS_CLASS_DEPRECATED_IOS(2_0, 7_0, "Use ASPolylineRenderer instead")
 @interface ASPolylineView : MKOverlayPathView
 
 /* The color used for the wider border around the polyline.
@@ -39,4 +38,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#endif
